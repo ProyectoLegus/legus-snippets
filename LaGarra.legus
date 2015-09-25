@@ -1,0 +1,63 @@
+/*
+    Robot, La Garra  | en Lego NXT
+    Software utilizado: Legus, Plataforma de programacion para principiantes
+                        https://github.com/rsiwady29/Legus
+    
+    Autor: Richard Siwady   <rsiwady29@gmail.com>
+*/
+
+/*Declaracion de Equipo a utilizar*/  
+Utilizar puertoA como motor en LaGarra
+Utilizar puertoB como motor en motIzq
+Utilizar puertoC como motor en motDer
+Utilizar puerto1 como SensorUltrasonico en su
+
+/*Funciones de ayuda*/
+funcion golpearconlagarra()
+    detener(LaGarra)
+    atras(LaGarra)
+    esperar(200)
+    detener(LaGarra)
+fin funcion
+
+funcion regresarlagarra()
+    detener(LaGarra)
+    adelante(LaGarra)
+    esperar(150)
+    detener(LaGarra)
+fin funcion
+
+funcion girar()
+    adelante(motIzq)
+    atras(motDer)
+fin funcion
+
+funcion detener_motores()
+    detener(motIzq, verdadero)
+    detener(motDer, verdadero)
+fin funcion
+
+funcion evaluar(dist1, dist2)
+    distancia = obtener_distancia(su)
+
+    si (distancia > dist1) y (distancia <= dist2) entonces        
+        detener_motores()
+        detener(LaGarra, falso)
+        golpearconlagarra()
+        regresarlagarra()
+        
+        girar()
+    fin si
+fin funcion
+
+/*Cuerpo del Programa*/
+Establecer_Velocidad(LaGarra, 1000)
+Establecer_Velocidad(motIzq, 200)
+Establecer_Velocidad(motDer, 200)
+
+girar()
+repetir infinitamente
+    
+    evaluar(10, 40)
+
+fin repetir

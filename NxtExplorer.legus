@@ -1,0 +1,67 @@
+/*
+    Robot Explorador en Lego NXT
+    Software utilizado: Legus, Plataforma de programacion para principiantes
+                        https://github.com/rsiwady29/Legus
+    
+    Autor: Richard Siwady   <rsiwady29@gmail.com>
+*/
+Utilizar puertoA como motor en motDer
+Utilizar puertoB como motor en motIzq
+Utilizar puertoC como motor en mot
+Utilizar puerto1 como sensorultrasonico en su
+
+funcion mover_adelante()
+    establecer_Velocidad(motDer, 1000)
+    establecer_Velocidad(motIzq, 1000)
+
+    adelante(motDer)
+    adelante(motIzq)
+fin funcion
+
+funcion detener_motores()
+    detener(motIzq, verdadero)
+    detener(motDer, verdadero)
+fin funcion
+
+funcion girar_izquierda()
+    detener_motores()
+    rotar_Motor(motIzq, 360, falso)
+    mover_adelante()
+fin funcion
+
+funcion girar_derecha()
+    detener_motores()
+    rotar_motor(motDer, 360, falso)
+    mover_adelante()
+fin funcion
+
+mover_adelante()
+
+repetir infinitamente
+
+    distanciaCentral = obtener_distancia(su)
+
+    si distanciaCentral < 30 entonces
+        detener_motores()      
+        establecer_Velocidad(mot, 1000)
+        rotar_Motor_Hacia(mot, 70, falso)
+
+        distanciaDer = obtener_Distancia(su)    
+        escriba(distanciaDer)
+
+        rotar_Motor_Hacia(mot, -70, falso)  
+      
+        distanciaIzq = obtener_distancia(su)
+        escriba(distanciaIzq) 
+
+        rotar_Motor_Hacia(mot, 0, falso)
+
+        si distanciaDer < distanciaIzq entonces
+            girar_derecha()
+        sino
+            girar_izquierda()    
+        fin si 
+        mover_adelante()
+    fin si    
+
+fin repetir

@@ -1,0 +1,13 @@
+funcion daf(v1)
+
+    si (v1>10) y (v1<40) entonces
+
+    fin si
+
+    retornar falso
+
+fin funcion
+
+si daf(10) entonces
+    escriba("El rango esta entre 10 y 40")
+fin si

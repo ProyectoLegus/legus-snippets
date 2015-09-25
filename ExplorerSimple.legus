@@ -1,0 +1,10 @@
+Utilizar puertoa como motor en varM1
+Utilizar puertob como motor en varM2
+
+establecer_Velocidad(varM1, 1000)
+establecer_Velocidad(varM2, 1000)
+
+adelante(varM1)
+adelante(varM2)
+
+esperar_Presion_Liberacion(botonCentral)

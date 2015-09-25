@@ -1,0 +1,5 @@
+funcion suma(v1, v2)
+    retornar v1 + v2
+fin funcion
+
+escriba(suma(10,10))

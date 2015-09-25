@@ -1,0 +1,48 @@
+utilizar puertoA como motor en motora
+utilizar puertoB como motor en motorb
+
+funcion mover_adelante()
+    establecer_Velocidad(motora,1000)
+    establecer_Velocidad(motorb,1000)
+
+    adelante(motora)
+    adelante(motorb)
+fin funcion
+
+funcion girar_izquierda()
+    detener(motora)
+
+    establecer_Velocidad(motorb,1000)
+    adelante(motorb)
+      
+    esperar(2000)
+    detener(motorb)    
+fin funcion
+
+funcion girar_derecha()
+    detener(motorb)
+
+    establecer_Velocidad(motorb,1000)
+    adelante(motora)
+      
+    esperar(2000)
+    detener(motora)   
+fin funcion
+
+funcion retroceder()
+    establecer_Velocidad(motora, 800)
+    establecer_Velocidad(motorb, 800)
+fin funcion
+
+mover_adelante()
+esperar(3000)
+
+girar_derecha()
+
+mover_adelante()
+esperar(3000)
+
+girar_derecha()
+
+mover_adelante()
+esperar(3000)

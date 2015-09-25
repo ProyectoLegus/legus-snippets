@@ -1,0 +1,36 @@
+/*
+    Cancion del videojuego Super Mario
+
+    La funcion tono recibe tres parametros: 
+        1- frecuencia
+        2- duracion 
+        3- retraso del programa
+
+    Autor del codigo: Richard Siwady
+*/
+
+tono(660,100, 150)
+tono(660,100, 300)
+tono(660,100, 300)
+tono(510,100, 100)
+tono(660,100, 300)
+tono(770,100, 550)
+tono(380,100, 575)
+
+tono(510,100,450)
+tono(380,100,400)
+tono(320,100,500)
+tono(440,100,300)
+tono(480,80,330)
+tono(450,100,150)
+tono(430,100,300)
+tono(380,100,200)
+tono(660,80,200)
+tono(760,50,150)
+tono(860,100,300)
+tono(700,80,150)
+tono(760,50,350)
+tono(660,80,300)
+tono(520,80,150)
+tono(580,80,150)
+tono(480,80,500)

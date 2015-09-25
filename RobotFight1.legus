@@ -1,0 +1,14 @@
+utilizar puertoA como motor en motDer
+utilizar puertoB como motor en motIzq
+utilizar puertoC como motor en LaGarra
+
+funcion mover_motores()
+    adelante(motDer)
+    adelante(motIzq)
+fin funcion
+
+funcion detener_motores()
+    detener(motDer,falso)
+    detener(motIzq,falso)
+fin funcion
+

@@ -1,0 +1,35 @@
+/*
+    Seguidor de Linea Negra
+    Software utilizado: Legus, Plataforma de programacion para principiantes
+                        https://github.com/rsiwady29/Legus
+    
+    Autor: Richard Siwady   <rsiwady29@gmail.com>
+*/
+utilizar puertoA como motor en motIzq
+utilizar puertoB como motor en motDer
+utilizar puerto1 como sensordeluz en luz
+
+umbral = 45
+velocidad = 500
+establecer_inundacion(luz, verdadero)
+
+mientras no( esta_Presionado(botonEscape) ) ejecute
+
+    si obtener_luz(luz) > umbral entonces
+    	/*Blanco! Girar Derecha*/
+    	detener(motIzq,verdadero)
+    	establecer_velocidad(motDer, velocidad)
+        adelante(motDer)
+    sino
+	   /*Negro! Girar Izquierda*/
+    	detener(motDer,verdadero)
+    	establecer_velocidad(motIzq, velocidad)
+        adelante(motIzq)
+    fin si
+	
+    esperar(10)
+
+fin mientras
+
+detener(motIzq, verdadero)
+detener(motDer, verdadero)

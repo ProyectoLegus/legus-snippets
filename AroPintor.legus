@@ -1,0 +1,12 @@
+/*
+    Aro Pintor en Lego NXT
+    Software utilizado: Legus, Plataforma de programacion para principiantes
+                        https://github.com/rsiwady29/Legus
+    
+    Autor: Richard Siwady   <rsiwady29@gmail.com>
+*/
+Utilizar puertoA como motor en motorA
+
+Establecer_Velocidad(motorA, 1000)
+Adelante(motorA)
+Esperar_Presion_Liberacion(BotonCentral)

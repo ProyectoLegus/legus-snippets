@@ -1,0 +1,29 @@
+/*
+    Pistolero Automatico en Lego NXT
+    Software utilizado: Legus, Plataforma de programacion para principiantes
+                        https://github.com/rsiwady29/Legus
+    
+    Autor: Richard Siwady   <rsiwady29@gmail.com>
+*/
+Utilizar PuertoA como Motor en motorPistola
+Utilizar Puerto1 como SensorDeTacto en gatillo
+
+funcion disparar()
+	atras(motorPistola)
+fin funcion
+
+funcion detener_disparo()
+	detener(motorPistola)
+fin funcion
+
+establecer_velocidad(motorPistola, 2000)
+
+repetir infinitamente 
+
+	si esta_presionado( gatillo ) entonces
+		disparar()
+	sino
+		detener_disparo()
+	fin si
+
+fin repetir

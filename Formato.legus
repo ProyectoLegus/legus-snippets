@@ -1,0 +1,22 @@
+/*Seccion para Declarar Sensores y Motores*/
+Utilizar puerto1 como SensorUltrasonico en sensUltr
+Utilizar puertoA como Motor en motorIzquierdo
+Utilizar puertoB como Motor en motorDerecho
+
+
+/*Seccion para la declaracion de Funciones y Procedimientos*/
+funcion moverAmbosMotores()
+    adelante(motorIzquierdo)
+    adelante(motorDerecho)
+fin funcion
+
+
+/*Seccion para el Codigo*/
+Establecer_Velocidad(motorIzquierdo, 1000)
+Establecer_Velocidad(motorDerecho, 1000)
+
+Repetir Infinitamente
+
+    moverAmbosMotores()
+
+Fin Repetir

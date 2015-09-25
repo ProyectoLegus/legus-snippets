@@ -1,0 +1,10 @@
+utilizar puertoA como motor en motorA
+Utilizar puertob como motor en motorB
+
+establecer_Velocidad(motorA, 1000)
+establecer_Velocidad(motorB, 1000)
+
+adelante(motorA)
+adelante(motorB)
+
+esperar_Presion_Liberacion(BotonDerecho)
